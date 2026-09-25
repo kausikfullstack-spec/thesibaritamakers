@@ -12,8 +12,8 @@ a:focus-visible { outline: 2px solid #8b5a08; outline-offset: 6px; }
 .contact-link:hover { color: #8b5a08; }
 .contact-link svg { width: 20px; height: 20px; flex-shrink: 0; stroke-width: 1.6; }
 .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100svh - 78px); background: #f2dec2; }
-.film { position: relative; overflow: hidden; min-height: 650px; background: #332216; -webkit-mask-image: linear-gradient(to right, #000 52%, #000e 65%, #0009 78%, #0003 91%, transparent 100%); mask-image: linear-gradient(to right, #000 52%, #000e 65%, #0009 78%, #0003 91%, transparent 100%); }
-.heritage-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; animation: film-in 1.8s ease both; }
+.film { position: relative; overflow: hidden; min-height: 650px; background: #332216; -webkit-mask-image: linear-gradient(to right, #000 95%, transparent 100%); mask-image: linear-gradient(to right, #000 95%, transparent 100%); }
+.heritage-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; transform: scale(1.1); transform-origin: center center; animation: film-in 1.8s ease both; }
 .video-sound-toggle { position: absolute; z-index: 2; top: 16px; left: 16px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid #d8b66a; border-radius: 50%; background: #24190ee6; color: #fff9ed; cursor: pointer; }
 .video-sound-toggle svg { width: 19px; height: 19px; }
 .video-sound-toggle:hover { background: #493015; }
@@ -23,7 +23,7 @@ a:focus-visible { outline: 2px solid #8b5a08; outline-offset: 6px; }
 .caption-rule { display: block; width: 46px; height: 1px; background: #d8b66a; margin-bottom: 20px; }
 .film-caption p { font-size: clamp(28px, 2.8vw, 48px); line-height: 1.1; margin: 0 0 22px; }
 .film-label { font: 8px var(--font-montserrat), sans-serif; letter-spacing: .25em; }
-.announcement { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 28px 28px 20px; background: transparent; }
+.announcement { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 18px 18px 10px; background: transparent; }
 .announcement-inner { position: relative; z-index: 1; width: 100%; max-width: 760px; text-align: center; margin: auto 0; }
 .logo-wrap { margin: 0 auto 13px; width: clamp(170px, 28vh, 300px); }
 .brand-logo { display: block; width: 100%; height: auto; filter: drop-shadow(0 4px 3px #8b5a0818); }
@@ -49,13 +49,13 @@ h1 { margin: 4px -10px 12px; font-size: clamp(52px, 6.1vw, 118px); font-weight: 
 @keyframes film-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slow-zoom { from { transform: scale(1); } to { transform: scale(1.03); } }
 @media (max-width: 767px) and (orientation: portrait), (max-width: 599px) {
-  .site-header { padding: 15px 20px; min-height: 94px; flex-direction: column; gap: 12px; }
+  .site-header { display: none; }
   .wordmark { font-size: 19px; text-align: center; }
   .wordmark span { font-size: 9px; }
   .contact-link { font-size: 11px; gap: 8px; min-height: 28px; }
   .contact-link svg { width: 17px; height: 17px; }
-  .hero { grid-template-columns: 1fr; }
-  .film { height: 56svh; min-height: 320px; max-height: 620px; -webkit-mask-image: linear-gradient(to bottom, #000 55%, #000e 66%, #0009 79%, #0003 92%, transparent 100%); mask-image: linear-gradient(to bottom, #000 55%, #000e 66%, #0009 79%, #0003 92%, transparent 100%); }
+  .hero { grid-template-columns: 1fr; min-height: 100svh; }
+  .film { height: 70svh; min-height: 320px; max-height: 760px; -webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent 100%); mask-image: linear-gradient(to bottom, #000 90%, transparent 100%); }
   .video-sound-toggle { top: 10px; left: 10px; width: 30px; height: 30px; }
   .video-sound-toggle svg { width: 14px; height: 14px; }
   .film-caption { left: 7%; bottom: 8%; }
